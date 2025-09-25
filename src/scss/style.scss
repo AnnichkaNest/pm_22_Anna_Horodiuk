@@ -1,11 +1,12 @@
-$bg: lightblue;
+$color: #3c0748;
 
 body {
-  background-color: $bg;
   font-family: Arial, sans-serif;
-}
+  background: #fdc5f4;
+  color: $color;
 
-h1 {
-  color: darkblue;
-  text-align: center;
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
 }

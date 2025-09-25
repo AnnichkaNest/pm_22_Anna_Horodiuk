@@ -2,11 +2,18 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Test Gulp SCSS</title>
+  <title>1 Лабораторна – Gulp Test</title>
   <link rel="stylesheet" href="css/style.css">
-</head>
+  </head>
 <body>
-  <h1>Привіт, Gulp!</h1>
-  <script src="js/script.js"></script>
+  <!-- Показуємо, що HTML збирається через partial -->
+  @@include('partials/header.html')
+
+  <main>
+    <h1>Привіт! Це 1 лабораторна робота!</h1>
+    <p>Тестуємо gulp-file-include.</p>
+  </main>
+
+  @@include('partials/footer.html')
 </body>
 </html>
