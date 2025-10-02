@@ -5,7 +5,7 @@ const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 const cssnano = require('gulp-cssnano'); // мінімізує CSS
 const rename = require('gulp-rename');   // для суфіксу .min
-
+const gulp = require('gulp');
 
 // HTML
 function html() {
@@ -58,11 +58,25 @@ function serve() {
   watch('src/images/**/*', images);}
 
 
+// Copy Bootstrap CSS and JS
+const copyCSS = () => {
+    return src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+        .pipe(dest('dist/css'));
+}
+
+const copyJS = () => {
+    return src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+        .pipe(dest('dist/js'));
+}
+
 // Exports
 exports.html = html;
 exports.scss = styles;
 exports.js = scripts;
 exports.images = images;
+exports.copyCSS = copyCSS;
+exports.copyJS = copyJS;
+exports.copyAll = parallel(copyCSS, copyJS);
 exports.default = series(
   parallel(html, styles, scripts, images),
   serve);
