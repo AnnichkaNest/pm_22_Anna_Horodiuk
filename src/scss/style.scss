@@ -1,12 +1,206 @@
-$color: #3c0748;
+// --- Змінні ---
+$black: #212121;
+$gray-bg: #e6e6e6; 
+$border-col: #d1d1d1;
+$font-main: 'Open Sans', sans-serif;
 
+// --- НАЛАШТУВАННЯ "СТОЛУ" (BODY) ---
 body {
-  font-family: Arial, sans-serif;
-  background: #fdc5f4;
-  color: $color;
-
-  h1 {
-    text-align: center;
-    margin-top: 50px;
-  }
+    background-color: #525659; 
+    font-family: $font-main;
+    margin: 0;
+    padding: 40px 0; 
+    min-height: 100vh;
+    display: flex;           
+    justify-content: center; 
+    align-items: flex-start; 
 }
+
+// --- ГОЛОВНИЙ АРКУШ (A4) ---
+.resume-paper {
+    width: 900px;            
+    min-height: 1150px;      // Трохи збільшив висоту, бо контент розтягнувся вниз
+    background-color: #fff;  
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
+    display: flex;
+    flex-direction: column;
+}
+
+// --- HEADER SECTION ---
+.header-section {
+    height: 250px; 
+    border-bottom: 1px solid $border-col;
+    display: flex; 
+}
+
+// Ліва колонка (Ім'я)
+.header-left {
+    width: 41.66%; 
+    position: relative;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .decor-rectangle {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 45px;
+        height: 75%;
+        background-color: $black;
+    }
+
+    h1 {
+        font-weight: 800;
+        font-size: 3.5rem; 
+        line-height: 0.9;
+        color: $black;
+        margin-bottom: 10px;
+    }
+
+    p {
+        letter-spacing: 3px;
+        font-size: 0.9rem;
+        color: #666;
+        margin: 0;
+    }
+}
+
+// Фото (Центр)
+.header-center {
+    width: 25%;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .photo-frame {
+        width: 170px;
+        height: 200px;
+        background-color: #ddd;
+        border: 7px solid #555; 
+        overflow: hidden;
+        display: flex; justify-content: center; align-items: center;
+        img { width: 100%; height: 100%; object-fit: cover; }
+    }
+}
+
+// Контакти (Право)
+.header-right {
+    width: 33.33%;
+    background-color: $black; 
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h5 {
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: flex; align-items: center;
+        
+        .icon-box-white {
+            background: white; color: $black;
+            width: 30px; height: 30px;
+            display: flex; justify-content: center; align-items: center;
+            margin-right: 15px; font-size: 16px;
+        }
+    }
+
+    ul {
+        list-style: none; padding: 0; margin: 0;
+        li {
+            display: flex; margin-bottom: 15px; font-size: 0.85rem;
+            i {
+                background: white; color: $black;
+                width: 20px; height: 20px;
+                display: flex; justify-content: center; align-items: center;
+                margin-right: 10px; font-size: 11px; margin-top: 2px;
+            }
+        }
+    }
+}
+
+// --- BODY SECTION ---
+.body-section {
+    display: flex; 
+    flex-grow: 1;  
+}
+
+// Сайдбар (Ліва колонка)
+.sidebar {
+    width: 41.66%; 
+    background-color: $gray-bg;
+    padding: 40px;
+    
+    hr { border-top: 1px solid #999; opacity: 1; margin: 30px 0; }
+}
+
+.section-title-sidebar {
+    font-weight: 800; font-size: 1.2rem; margin-bottom: 20px;
+    display: flex; align-items: center; color: $black;
+
+    .icon-box-black {
+        background: $black; color: white;
+        width: 30px; height: 30px;
+        display: flex; justify-content: center; align-items: center;
+        margin-right: 15px; font-size: 14px;
+    }
+}
+
+// === ОНОВЛЕНІ ПРОГРЕС БАРИ (В РЯДОК) ===
+.progress-box-inline {
+    display: flex; // Робимо в рядок
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; 
+    font-size: 0.85rem; 
+    font-weight: 700;
+    
+    .label-txt {
+        flex-shrink: 0;
+        width: 45%; // Ширина тексту
+    }
+
+    .progress-track {
+        height: 10px; 
+        width: 50%; // Ширина бару
+        border: 1px solid #777;
+        padding: 1px;
+        // margin-top прибрали
+        .progress-fill { height: 100%; background: $black; }
+    }
+}
+
+.lang-tag {
+    border: 2px solid $black; padding: 5px 10px;
+    font-weight: 700; font-size: 0.8rem; color: $black;
+}
+
+// Контент (Права колонка)
+.content {
+    width: 58.33%; 
+    padding: 50px;
+    background-color: white;
+
+    hr { border-top: 1px solid $black; opacity: 1; margin: 30px 0; }
+}
+
+.section-title-content {
+    font-weight: 800; font-size: 1.4rem; margin-bottom: 30px;
+    display: flex; align-items: center; color: $black;
+    i { margin-right: 10px; font-size: 24px; }
+}
+
+// Стилізація тексту
+.job-role { font-weight: 800; text-transform: uppercase; margin-bottom: 0; }
+.job-date { float: right; font-weight: 600; }
+.text-justify { text-align: justify; font-size: 0.9rem; color: #555; }
+
+// Відступ для блоків референсів
+.reference-block { margin-bottom: 25px; }
+.small-txt { font-size: 0.85rem; color: #555; line-height: 1.4; }

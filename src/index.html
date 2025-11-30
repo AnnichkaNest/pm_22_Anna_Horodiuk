@@ -1,19 +1,250 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>1 Лабораторна – Gulp Test</title>
-  <link rel="stylesheet" href="css/style.css">
-  </head>
-<body>
-  <!-- Показуємо, що HTML збирається через partial -->
-  @@include('partials/header.html')
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noel Taylor - Bootstrap A4</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Темний фон для body (Bootstrap не має кольору #555) */
+        body { background-color: #555; }
+        
+        /* Єдиний кастомний клас для фіксації розміру */
+        .a4-page {
+            width: 210mm;
+            min-height: 297mm;
+            /* Для екранів фіксуємо в пікселях */
+            min-width: 900px;
+            max-width: 900px; 
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        /* Трохи коригуємо сірий колір сайдбару, бо bg-light занадто світлий */
+        .bg-gray-custom { background-color: #e6e6e6; }
+    </style>
+</head>
 
-  <main>
-    <h1>Привіт! Це 1 лабораторна робота!</h1>
-    <p>Тестуємо gulp-file-include.</p>
-  </main>
+<body class="d-flex justify-content-center py-5 min-vh-100">
 
-  @@include('partials/footer.html')
+    <div class="a4-page bg-white shadow-lg d-flex flex-column">
+
+        <div class="row g-0 border-bottom" style="min-height: 230px;">
+            
+            <div class="col-5 d-flex align-items-center position-relative">
+                <div class="bg-dark h-75 position-absolute start-0" style="width: 35px;"></div>
+                
+                <div class="ps-5 ms-3">
+                    <h1 class="fw-bold display-5 text-uppercase mb-0 lh-1">Noel <br> Taylor</h1>
+                    <p class="text-uppercase text-secondary letter-spacing-2 mt-2 mb-0 small" style="letter-spacing: 2px;">Graphic & Web Designer</p>
+                </div>
+            </div>
+
+            <div class="col-3 border-start border-end d-flex justify-content-center align-items-center">
+                <div class="bg-secondary bg-opacity-25 border border-5 border-secondary d-flex justify-content-center align-items-center overflow-hidden" style="width: 170px; height: 190px;">
+                    <img src="images/photo.jpg" alt="" class="w-100 h-100 object-fit-cover" onerror="this.style.display='none'">
+                </div>
+            </div>
+
+            <div class="col-4 bg-dark text-white p-4 d-flex flex-column justify-content-center">
+                <h5 class="fw-bold text-uppercase mb-4 d-flex align-items-center">
+                    <span class="bg-white text-dark d-flex justify-content-center align-items-center me-3" style="width: 30px; height: 30px;">
+                        <i class="fa-solid fa-user fs-6"></i>
+                    </span>
+                    Contact
+                </h5>
+                
+                <ul class="list-unstyled small text-white-50">
+                    <li class="d-flex mb-3">
+                        <span class="bg-white text-dark d-flex justify-content-center align-items-center me-3" style="width: 20px; height: 20px;">
+                            <i class="fa-solid fa-phone" style="font-size: 10px;"></i>
+                        </span>
+                        <div>+1-718-310-5588<br>+1-313-381-8167</div>
+                    </li>
+                    <li class="d-flex mb-3">
+                        <span class="bg-white text-dark d-flex justify-content-center align-items-center me-3" style="width: 20px; height: 20px;">
+                            <i class="fa-solid fa-globe" style="font-size: 10px;"></i>
+                        </span>
+                        <div>www.yourwebsite.com<br>yourinfo@email.com</div>
+                    </li>
+                    <li class="d-flex">
+                        <span class="bg-white text-dark d-flex justify-content-center align-items-center me-3" style="width: 20px; height: 20px;">
+                            <i class="fa-solid fa-location-dot" style="font-size: 10px;"></i>
+                        </span>
+                        <div>789 Prudence Street<br>Lincoln Park, MI</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row g-0 flex-grow-1">
+            
+            <div class="col-5 bg-gray-custom p-5">
+                
+                <div class="mb-5">
+                    <h6 class="fw-bold text-uppercase mb-3 d-flex align-items-center">
+                        <span class="bg-dark text-white d-flex justify-content-center align-items-center me-3" style="width: 30px; height: 30px;">
+                            <i class="fa-solid fa-user fs-6"></i>
+                        </span>
+                        About Me
+                    </h6>
+                    <p class="small text-muted" style="text-align: justify;">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </p>
+                </div>
+                
+                <hr class="border-secondary opacity-50 my-4">
+
+                <div class="mb-5">
+                    <h6 class="fw-bold text-uppercase mb-3 d-flex align-items-center">
+                        <span class="bg-dark text-white d-flex justify-content-center align-items-center me-3" style="width: 30px; height: 30px;">
+                            <i class="fa-solid fa-chart-pie fs-6"></i>
+                        </span>
+                        Skills
+                    </h6>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small fw-bold mb-1">Adobe Photoshop</div>
+                        <div class="progress border border-dark rounded-0 bg-transparent" style="height: 8px; padding: 1px;">
+                            <div class="progress-bar bg-dark" role="progressbar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small fw-bold mb-1">Adobe Illustrator</div>
+                        <div class="progress border border-dark rounded-0 bg-transparent" style="height: 8px; padding: 1px;">
+                            <div class="progress-bar bg-dark" role="progressbar" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small fw-bold mb-1">Microsoft Word</div>
+                        <div class="progress border border-dark rounded-0 bg-transparent" style="height: 8px; padding: 1px;">
+                            <div class="progress-bar bg-dark" role="progressbar" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-secondary opacity-50 my-4">
+
+                <div class="mb-5">
+                    <h6 class="fw-bold text-uppercase mb-3 d-flex align-items-center">
+                        <span class="bg-dark text-white d-flex justify-content-center align-items-center me-3" style="width: 30px; height: 30px;">
+                            <i class="fa-solid fa-globe fs-6"></i>
+                        </span>
+                        Languages
+                    </h6>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="border border-2 border-dark px-2 py-1 small fw-bold text-dark">ENGLISH</span>
+                        <span class="border border-2 border-dark px-2 py-1 small fw-bold text-dark">SPANISH</span>
+                        <span class="border border-2 border-dark px-2 py-1 small fw-bold text-dark">FRENCH</span>
+                    </div>
+                </div>
+
+                <hr class="border-secondary opacity-50 my-4">
+
+                 <div>
+                    <h6 class="fw-bold text-uppercase mb-3 d-flex align-items-center">
+                        <span class="bg-dark text-white d-flex justify-content-center align-items-center me-3" style="width: 30px; height: 30px;">
+                            <i class="fa-solid fa-flag-checkered fs-6"></i>
+                        </span>
+                        Hobbies
+                    </h6>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small fw-bold mb-1">Book Reading</div>
+                        <div class="progress border border-dark rounded-0 bg-transparent" style="height: 8px; padding: 1px;">
+                            <div class="progress-bar bg-dark" role="progressbar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="d-flex justify-content-between small fw-bold mb-1">Travelling</div>
+                        <div class="progress border border-dark rounded-0 bg-transparent" style="height: 8px; padding: 1px;">
+                            <div class="progress-bar bg-dark" role="progressbar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-7 bg-white p-5">
+                
+                <div class="mb-5">
+                    <h4 class="fw-bold text-uppercase mb-4 d-flex align-items-center">
+                        <i class="fa-solid fa-graduation-cap me-3"></i> Education
+                    </h4>
+                    
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="small fw-bold text-uppercase">Stanford University</div>
+                            <div class="small text-muted fst-italic">Master Degree Graduate</div>
+                            <div class="small fw-bold mt-1">2011 - 2013</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small fw-bold text-uppercase">University of Chicago</div>
+                            <div class="small text-muted fst-italic">Bachelor Degree Graduate</div>
+                            <div class="small fw-bold mt-1">2007 - 2010</div>
+                        </div>
+                    </div>
+                    <hr class="border-dark opacity-100 my-4">
+                </div>
+
+                <div class="mb-5">
+                    <h4 class="fw-bold text-uppercase mb-4 d-flex align-items-center">
+                        <i class="fa-solid fa-users me-3"></i> References
+                    </h4>
+                    
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="small fw-bold text-uppercase">Darwin B. Magana</div>
+                            <div class="small text-muted">1964 Harley Brook Lane</div>
+                            <div class="small text-muted">Tel: +1-978-533-3393</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small fw-bold text-uppercase">Robert J. Belvin</div>
+                            <div class="small text-muted">1283 Little Acres Lane</div>
+                            <div class="small text-muted">Tel: +1-908-987-5103</div>
+                        </div>
+                    </div>
+                    <hr class="border-dark opacity-100 my-4">
+                </div>
+
+                 <div>
+                    <h4 class="fw-bold text-uppercase mb-4 d-flex align-items-center">
+                        <i class="fa-solid fa-briefcase me-3"></i> Job Experience
+                    </h4>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <h6 class="fw-bold text-uppercase mb-0">Web Designer</h6>
+                            <span class="small fw-bold">2020 - Present</span>
+                        </div>
+                        <div class="small text-muted fst-italic mb-2">Creative Agency / Chicago</div>
+                        <p class="small text-muted" style="text-align: justify;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <h6 class="fw-bold text-uppercase mb-0">Graphic Designer</h6>
+                            <span class="small fw-bold">2015 - 2020</span>
+                        </div>
+                        <div class="small text-muted fst-italic mb-2">Creative Market / Chicago</div>
+                        <p class="small text-muted" style="text-align: justify;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                        </p>
+                    </div>
+                    
+                    <hr class="border-dark opacity-100">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
