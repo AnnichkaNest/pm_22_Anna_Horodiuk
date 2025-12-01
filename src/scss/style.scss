@@ -48,21 +48,21 @@ body {
         top: 0;
         bottom: 0;
         width: 45px;
-        height: 75%;
+        height: 85%;
         background-color: $black;
     }
 
     h1 {
-        font-weight: 800;
-        font-size: 3.5rem; 
+        font-weight: 100;
+        font-size: 5.0rem; 
         line-height: 0.9;
         color: $black;
         margin-bottom: 10px;
     }
 
     p {
-        letter-spacing: 3px;
-        font-size: 0.9rem;
+        letter-spacing: 2px;
+        font-size: 0.7rem;
         color: #666;
         margin: 0;
     }
@@ -204,3 +204,25 @@ body {
 // Відступ для блоків референсів
 .reference-block { margin-bottom: 25px; }
 .small-txt { font-size: 0.85rem; color: #555; line-height: 1.4; }
+
+
+
+/* Стиль для рядка навички/хобі */
+.skill-row {
+    display: flex;             /* Ставимо в один рядок */
+    justify-content: space-between; /* Розводимо по краях */
+    align-items: center;       /* Центруємо по висоті */
+    margin-bottom: 15px;       /* Відступ знизу */
+}
+
+/* Ширина тексту з назвою */
+.skill-label {
+    width: 45%;                /* Текст займає трохи менше половини */
+    font-size: 0.85rem;        /* Розмір шрифту (small) */
+    font-weight: bold;
+}
+
+/* Ширина смужки прогресу */
+.skill-bar-container {
+    width: 50%;                /* Смужка займає другу половину */
+}
