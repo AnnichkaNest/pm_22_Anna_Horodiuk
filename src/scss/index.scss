@@ -1,0 +1,11 @@
+// 1. Спочатку змінні та інструменти
+@import 'partials/variables';
+@import 'partials/mixins';
+
+// 2. Базові стилі
+@import 'partials/base';
+
+// 3. Модулі частин сторінки
+@import 'partials/header';
+@import 'partials/sidebar';
+@import 'partials/content';

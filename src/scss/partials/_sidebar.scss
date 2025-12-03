@@ -1,0 +1,43 @@
+.bg-gray-custom {
+    background-color: $gray-bg;
+
+    // Вкладеність (Nesting)
+    .fa-solid {
+        transition: transform 0.3s;
+    }
+
+    &:hover .fa-solid {
+        transform: rotate(10deg);
+    }
+}
+
+// Теги мов
+.language-tag {
+    border: 2px solid $black;
+    // Математика (Завдання 4): розрахунок відступів
+    padding: ($base-spacing / 2) ($base-spacing - 2px); 
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: $black;
+    display: inline-block;
+}
+
+.icon-box-sm {
+    @extend %icon-shared-style; // Наслідування стилів іконки
+    width: 30px;
+    height: 30px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.skill-label {
+    width: 55%;
+}
+
+.skill-track {
+    width: 35%;
+    height: 6px;
+    padding: 1px;
+}

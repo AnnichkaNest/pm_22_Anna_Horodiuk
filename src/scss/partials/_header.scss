@@ -1,0 +1,45 @@
+// Заголовок імені
+h1.display-2 {
+    font-weight: 800;
+    // Математика (Завдання 4): розрахунок letter-spacing
+    letter-spacing: -2px; 
+}
+
+.header-row {
+    min-height: 350px;
+}
+
+.decor-bar {
+    width: 55px;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+.header-box {
+    width: 270px;
+    height: 260px;
+}
+
+// Іконки
+.icon-box-md {
+    // Використання наслідування (Завдання 4: @extend)
+    @extend %icon-shared-style; 
+    
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+}
+
+.icon-box-xs {
+    @extend %icon-shared-style;
+    
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+}

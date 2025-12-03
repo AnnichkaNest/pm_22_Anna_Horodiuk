@@ -1,0 +1,14 @@
+// Міксін для тексту
+@mixin text-style($size, $weight, $color: $black, $transform: none) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    text-transform: $transform;
+}
+
+// Міксін для Flex-центрування
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

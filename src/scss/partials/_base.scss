@@ -1,0 +1,77 @@
+// Скидання та Body
+body {
+    background-color: #525659;
+    font-family: $font-primary;
+    -webkit-font-smoothing: antialiased;
+}
+
+// Шаблон іконки (Завдання 4: @extend)
+// Це "тихий" клас (placeholder), він не компілюється сам по собі, 
+// але його властивості наслідують інші класи.
+%icon-shared-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    color: $black;
+}
+
+// Посилання
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: $transition;
+    &:hover { opacity: 0.7; }
+}
+
+// Кнопка друку
+.btn-light {
+    border: 1px solid #ddd;
+    transition: $transition;
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    }
+    &:active { transform: translateY(0); }
+}
+
+// Прогрес-бари
+.progress {
+    border: 1px solid $black;
+    background-color: transparent;
+    border-radius: 0;
+    height: 8px;
+    overflow: visible;
+    .progress-bar {
+        background-color: $black !important;
+        transition: width 1s ease;
+    }
+}
+
+// Головний контейнер А4
+.a4-page {
+    width: 210mm;
+    min-height: 297mm;
+    min-width: 900px;
+    max-width: 900px;
+    background-color: $white;
+    box-shadow: $shadow-paper;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+// Стилі для друку
+@media print {
+    body { background: none; padding: 0; }
+    .d-print-none { display: none !important; }
+    .a4-page {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+    }
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
