@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+@@include('partials/head.html')
+
+<body class="d-flex flex-column align-items-center py-5 min-vh-100">
+
+    <div class="mb-4 d-print-none">
+        <button onclick="window.print()" class="btn btn-light btn-lg shadow fw-bold text-uppercase">
+            <i class="fa-solid fa-print me-2"></i> Save as PDF
+        </button>
+    </div>
+    
+    <div class="a4-page bg-white shadow-lg d-flex flex-column">
+
+        @@include('partials/resume-header.html')
+
+        <div class="row g-0 flex-grow-1">
+            
+            @@include('partials/sidebar.html')
+
+            @@include('partials/content.html')
+
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
