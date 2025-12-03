@@ -14,14 +14,14 @@ function html() {
     .pipe(browserSync.stream());
 }
 
-// SCSS
+// SCSS Task
 function styles() {
-  return src('src/scss/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(cssnano())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(dest('dist/css'))
-    .pipe(browserSync.stream());
+  return src('src/scss/index.scss') 
+    .pipe(sass().on('error', sass.logError)) // Компілюємо SCSS -> CSS
+    .pipe(cssnano()) // Мінімізуємо (стискаємо) код
+    .pipe(rename('index.min.css')) // Перейменовуємо результат на index.min.css (згідно завдання)
+    .pipe(dest('dist/css')) // Кладемо в папку dist
+    .pipe(browserSync.stream()); // Оновлюємо браузер
 }
 
 // JS
