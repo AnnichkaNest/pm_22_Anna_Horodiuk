@@ -6,12 +6,10 @@ body {
 }
 
 // Шаблон іконки (Завдання 4: @extend)
-// Це "тихий" клас (placeholder), він не компілюється сам по собі, 
-// але його властивості наслідують інші класи.
 %icon-shared-style {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // 1. ВИКОРИСТАННЯ МІКСІНА (flex-center)
+    @include flex-center; 
+    
     background-color: $white;
     color: $black;
 }

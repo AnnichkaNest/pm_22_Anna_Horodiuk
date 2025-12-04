@@ -1,11 +1,23 @@
 .col-7 {
-    // Вкладеність
+    // Вкладеність (Nesting)
+    
     hr {
         opacity: 1;
         border-top: 1px solid $black;
+        
+        margin-top: $base-spacing * 2;
+        margin-bottom: $base-spacing * 2;
     }
     
     h6 {
+        @include text-style(1rem, 700, $black);
+        
         letter-spacing: 0.5px;
+    }
+    
+    // Додатковий приклад вкладеності для дрібного тексту
+    .small {
+        // Можна трохи змінити колір, використовуючи функцію SCSS
+        color: lighten($black, 20%); // Робить чорний на 20% світлішим (темно-сірий)
     }
 }

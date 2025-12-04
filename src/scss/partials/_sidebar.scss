@@ -14,11 +14,14 @@
 // Теги мов
 .language-tag {
     border: 2px solid $black;
+    
     // Математика (Завдання 4): розрахунок відступів
     padding: ($base-spacing / 2) ($base-spacing - 2px); 
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: $black;
+    
+    // 2. ВИКОРИСТАННЯ МІКСІНА (text-style)
+    // Замінює font-size, font-weight і color
+    @include text-style(0.75rem, 700, $black);
+    
     display: inline-block;
 }
 
