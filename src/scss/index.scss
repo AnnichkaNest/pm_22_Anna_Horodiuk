@@ -1,11 +1,9 @@
-// 1. Спочатку змінні та інструменти
-@import 'partials/variables';
-@import 'partials/mixins';
+// 1. Утиліти (вони лежать ПОРУЧ у папці utils, тому крапки не треба)
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/base';
 
-// 2. Базові стилі
-@import 'partials/base';
-
-// 3. Модулі частин сторінки
-@import 'partials/header';
-@import 'partials/sidebar';
-@import 'partials/content';
+// 2. Компоненти (вони лежать ВИЩЕ, тому ../ потрібні)
+@import '../components/header/header';
+@import '../components/sidebar/sidebar';
+@import '../components/content/content';
