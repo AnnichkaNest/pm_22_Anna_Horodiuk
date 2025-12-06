@@ -73,3 +73,27 @@ a {
         print-color-adjust: exact !important;
     }
 }
+
+// --- Класи для JavaScript інтерактивності ---
+
+// Цей клас JS додає, щоб сховати список
+.is-hidden {
+    display: none !important;
+}
+
+// Цей клас JS додає, щоб повернути стрілку
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+// Щоб стрілка крутилася плавно, а не стрибала
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+
+// Щоб курсор показував, що можна клікнути
+.toggle-header {
+    cursor: pointer;
+    user-select: none; // Щоб текст не виділявся при швидкому кліку
+}
+

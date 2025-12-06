@@ -21,3 +21,26 @@
         color: lighten($black, 20%); // Робить чорний на 20% світлішим (темно-сірий)
     }
 }
+
+/* Плавний перехід для стрілки */
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Клас для повороту стрілки */
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+
+.is-hidden {
+    display: none;
+}
+
+
+.toggle-header {
+    cursor: pointer;
+    user-select: none; /* Щоб текст не виділявся при швидкому кліку */
+}
+/* (Опціонально) Клас для приховування, якщо не використовуєте Bootstrap d-none */
+/* .d-none { display: none !important; } - це вже є в Bootstrap */
