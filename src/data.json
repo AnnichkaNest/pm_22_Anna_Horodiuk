@@ -1,0 +1,72 @@
+{
+  "personalData": {
+    "firstName": "Anna",
+    "lastName": "Horodiuk",
+    "position": "Project Manager"
+  },
+  "contacts": {
+    "phone": ["+1-718-310-5588", "+1-313-381-8167"],
+    "web": ["www.yourwebsite.com", "yourinfo@email.com"],
+    "address": ["789 Prudence Street", "Lincoln Park, MI"]
+  },
+  "aboutMe": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type. It has survived not only five centuries, but the leap into electronic typesetting unchanged.",
+  "skills": [
+    { "name": "Adobe Photoshop", "level": "90%" },
+    { "name": "Adobe Illustrator", "level": "85%" },
+    { "name": "Microsoft PowerPoint", "level": "75%" },
+    { "name": "Microsoft Word", "level": "95%" },
+    { "name": "HTML-5/CSS-3", "level": "80%" }
+  ],
+  "languages": ["ENGLISH", "SPANISH", "FRENCH"],
+  "hobbies": [
+    { "name": "Book Reading", "level": "80%" },
+    { "name": "Travelling", "level": "90%" },
+    { "name": "Playing Chess", "level": "60%" }
+  ],
+  "jobExperience": [
+    {
+      "position": "Project Manager",
+      "years": "2020 - Present",
+      "company": "Creative Agency / Chicago",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."
+    },
+    {
+      "position": "Graphic Designer",
+      "years": "2015 - 2020",
+      "company": "Creative Market / Chicago",
+      "description": "Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet."
+    },
+    {
+      "position": "Marketing Manager",
+      "years": "2013 - 2015",
+      "company": "Manufacturing Agency / NJ",
+      "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."
+    }
+  ],
+  "education": [
+    {
+      "university": "Stanford University",
+      "degree": "Master Degree Graduate",
+      "years": "2011 - 2013"
+    },
+    {
+      "university": "University of Chicago",
+      "degree": "Bachelor Degree Graduate",
+      "years": "2007 - 2010"
+    }
+  ],
+  "references": [
+    {
+      "name": "Darwin B. Magana",
+      "address": "1964 Harley Brook Lane, Johnstown, PA 15904",
+      "phone": "+1-978-533-3393",
+      "email": "www.yourwebsite.com"
+    },
+    {
+      "name": "Robert J. Belvin",
+      "address": "1283 Little Acres Lane, Champaign, IL 61820",
+      "phone": "+1-908-987-5103",
+      "email": "www.yourwebsite.com"
+    }
+  ]
+}

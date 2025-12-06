@@ -42,6 +42,12 @@ function images() {
     .pipe(browserSync.stream());
 }
 
+function json() {
+  return src('src/data.json')
+    .pipe(dest('dist'))
+    .pipe(browserSync.stream());
+}
+
 // Копіювання CSS Bootstrap
 function copyCSS() {
   return src('node_modules/bootstrap/dist/css/bootstrap.min.css')
@@ -70,6 +76,7 @@ function serve() {
   
   watch('src/js/**/*.js', series(scripts, reload));
   watch('src/images/**/*', series(images, reload));
+  watch('src/data.json', series(json, reload));
 }
 
 // Функція перезавантаження для JS/Images
@@ -83,11 +90,12 @@ exports.html = html;
 exports.scss = styles;
 exports.js = scripts;
 exports.images = images;
+exports.json = json;
 exports.copyCSS = copyCSS;
 exports.copyJS = copyJS;
 
 // Дефолтний таск (запускається просто командою 'gulp')
 exports.default = series(
-  parallel(html, styles, scripts, images, copyCSS, copyJS),
+  parallel(html, styles, scripts, images, json, copyCSS, copyJS),
   serve
 );
